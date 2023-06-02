@@ -7,6 +7,10 @@ ALB supports weighted traffic distribution so with the help of ALB we can do "Ca
 
 # Diagram:
 
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/3acd37c6-2db8-4c42-9f6d-e466f6e35416)
+
+
+
 # Step 1 : Create Launch configuration
 
 Log in ec2 console >> Choose "Launch configuration" under Auto Scaling >> Click "Create Launch configuration"
@@ -262,7 +266,12 @@ _Once we call url we can find the version one page_
 
 
 
-# Canary Deployment :
+# Canary Deployment:
+
+# Diagram:
+
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/e7dc66d3-cd0c-4d1e-84d9-a4d731b1d30c)
+
 
 Canary deployment is the practice of making staged releases. We roll out a software update to a small part of the users first, so they may test it and provide feedback. Once the change is accepted, the update is rolled out to the rest of the users
 

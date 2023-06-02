@@ -188,8 +188,6 @@ _Under " Redirect" ,Choose HTTPS : 443_
 
 
 
-![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/f225ca6f-3c43-4704-96b9-e8bff226fea0)
-
 
 
 

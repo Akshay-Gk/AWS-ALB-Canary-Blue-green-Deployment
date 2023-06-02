@@ -191,7 +191,7 @@ _Under " Redirect" ,Choose HTTPS : 443_
 
 
 
-# Step 5 : Manage Listener Rules
+# Step 6 : Manage Listener Rules
 
 _Manage rules of "HTTPS" listener_
 _Enable "HTTPS" listener and in **"Actions"** select "Manage rules"_
@@ -209,14 +209,37 @@ _Under **Add Condition** Select "host header" from the drop down_
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/6bf1ab7b-536b-4233-9d9a-f45964c859fc)
 
 _Add your "host name" under "Host header"_
-_under **Add action** Select "Forward to" from the drop down_
 
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/a6d0b10e-c598-4c97-9b65-bbfee6aacc50)
 
 
+_under **Add action** Select "Forward to" from the drop down select "my-app-version1-tg: 1"_
+_Hit tick mark then hit "save"_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/b364da54-ba5b-4a58-965b-766103d4b44a)
 
 
+_You can see added rule_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/d7ca96ea-8d8f-4ea1-a5a3-e420dc71d9b2)
+
+_Edit Default rule and set "fixed response"_
+_Add a "site not found" text in Response body_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/41b2a74e-4a26-4cd7-8f5c-af0094ce6a8c)
 
 
+# Step 6 : Add Record in Route53
 
+
+_On the navigation pane, in **Route53** , choose **Hosted zones**_
+_Choose **"create record"** Add a **"A record"** under domain_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/cbfb99ea-9dcb-49c8-a7f8-8a1a9ea5eede)
+
+_Enter record name_
+_Under route traffic choose:_ 
+* _Alias to Application and classic load balancer_
+* _Choose region_
+*  
 

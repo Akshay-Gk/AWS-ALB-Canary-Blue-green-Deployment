@@ -198,7 +198,20 @@ _Enable "HTTPS" listener and in **"Actions"** select "Manage rules"_
 
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/fe90fa8f-b834-49b5-a60b-4f2fca2a18b2)
 
+_Click plus sign and new add rule_
+_You can find Default rule in green box_
 
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/05d7c247-afec-4318-a426-bb252e3f4456)
+
+_Click "insert rule"_
+_Under **Add Condition** Select "host header" from the drop down_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/6bf1ab7b-536b-4233-9d9a-f45964c859fc)
+
+_Add your "host name" under "Host header"_
+_under **Add action** Select "Forward to" from the drop down_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/a6d0b10e-c598-4c97-9b65-bbfee6aacc50)
 
 
 

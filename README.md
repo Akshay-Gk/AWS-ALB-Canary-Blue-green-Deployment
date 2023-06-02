@@ -172,6 +172,10 @@ _Under Load balancer we can see the newly created Load balancer "my-app-alb"_
 
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/73d78d2d-131c-49a9-93b2-5548bf448de9)
 
+
+# Step 5 : Add Listener
+
+
 _Once we Enable "my-app-alb" load balance we can find "listener" tab_
 _Click "Add Listener"_
 
@@ -185,6 +189,14 @@ _Under " Redirect" ,Choose HTTPS : 443_
 
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/ed5ba199-26a2-42f7-8561-63b725bdd468)
 
+
+
+# Step 5 : Manage Listener Rules
+
+_Manage rules of "HTTPS" listener_
+_Enable "HTTPS" listener and in **"Actions"** select "Manage rules"_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/fe90fa8f-b834-49b5-a60b-4f2fca2a18b2)
 
 
 

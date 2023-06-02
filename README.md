@@ -249,17 +249,27 @@ _Under route traffic choose:_
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/fb607a61-ddc6-4d03-9c2a-f39ebe6705e0)
 
 
-# Step 6 : Call URL 
+# Step 7 : Call URL 
 
 _Once we call url we can find the version one page_
 
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/9fd57d79-4dd8-4169-b010-fd7e78e394c2)
 
+> `Note: Now we have create version 1`
+
 
 > `Note: ALB supports weighted traffic distribution so with the help of ALB we can do "Canary Deployment" and "Blue Green Deployment". Now i'm showing a simple demonstration of both type of deployment`
 
 
-# Step 6 : Canary Deployment :
 
+# Canary Deployment :
+
+> `Canary deployment is the practice of making staged releases. We roll out a software update to a small part of the users first, so they may test it and provide feedback. Once the change is accepted, the update is rolled out to the rest of the users`
+
+# Step 8 : Create a version 2 
+
+* **_Repeat the same steps 1, steps 2 & steps 3 with name Version 2 instead of version 1_**
+
+# Step 8 : 
 
 

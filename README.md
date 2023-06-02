@@ -126,7 +126,69 @@ _Under health checks,_
 _Enable "Turn on Elastic Load Balancing health checks"_
 > `Elastic Load Balancing monitors whether instances are available to handle requests. When it reports an unhealthy instance, EC2 Auto Scaling can replace it on its next periodic check`
 
+_Hit "Update"_
+
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/1c248149-6fe2-4c2f-b0d4-4c2871e18fbb)
+
+
+# Step 4 : Create Application Load balancer
+
+
+_On the navigation pane, under LOAD BALANCING, choose Load balancers_
+_Click "Create Load balancer"
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/fa25b8cd-2976-4a7a-b18d-588036839c68)
+
+_Under "Application Load Balancer" , Click "create"_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/cbe40f62-70c0-46d9-b1bc-bb26a90043c1)
+
+_Enter name_ 
+_Under Scheme ,Choose "Internet-facing"_
+_Under IP address type ,Choose "IPv4"_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/8d10f194-b224-4456-8850-79ed31a5bb6c)
+
+_Choose VPC_
+_Select Subnet "ap-south-1a (aps1-az1)" & "ap-south-1b (aps1-az3)"
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/ce70d2e4-b389-4995-be8b-dbf3daa63bd1)
+
+_Select Secutiy group_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/a9d37202-2dc1-4f10-bc58-2e936c36286e)
+
+_Under Listeners and routing , Choose Protocol "HTTPS"
+_Under Default action , Choose Target Group - "my-app-version1-tg"_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/481ef392-48a5-4b69-bbae-e612ea7d9752)
+
+_Under Secure listener settings , Choose your "Default SSL/TLS certificate" From **ACM**_
+_Hit "Create Load balancer"_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/eaca4a0d-a08c-440f-8a0b-f1fa9d98f42e)
+
+_Under Load balancer we can see the newly created Load balancer "my-app-alb"_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/73d78d2d-131c-49a9-93b2-5548bf448de9)
+
+_Once we Enable "my-app-alb" load balance we can find "listener" tab_
+_Click "Add Listener"_
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/fad4be5c-8214-42f2-96a0-f092cce2f463)
+
+
+_Under Listener details , Choose HTTP: 80_
+_Under " Redirect" ,Choose HTTPS : 443_
+
+> `Note: Here we enabling auto redirection of HTTP Traffic to HTTPS`
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/ed5ba199-26a2-42f7-8561-63b725bdd468)
+
+
+
+
+![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/f225ca6f-3c43-4704-96b9-e8bff226fea0)
 
 
 

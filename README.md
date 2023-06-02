@@ -264,7 +264,7 @@ _Once we call url we can find the version one page_
 
 # Canary Deployment :
 
-> `Canary deployment is the practice of making staged releases. We roll out a software update to a small part of the users first, so they may test it and provide feedback. Once the change is accepted, the update is rolled out to the rest of the users`
+Canary deployment is the practice of making staged releases. We roll out a software update to a small part of the users first, so they may test it and provide feedback. Once the change is accepted, the update is rolled out to the rest of the users
 
 # Step 8 : Create a version 2 
 

@@ -120,7 +120,7 @@ _Here we can see the created "Target group"
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/cc04cd09-e082-43fb-96ee-8c3e41c97f95)
 
 
-# Step 3 : Attach Target group to Auto Scaling Group
+# Step 4 : Attach Target group to Auto Scaling Group
 
 _In Auto Scaling Group edit the existing "my-app-version1-asg" ASG_
 
@@ -138,7 +138,7 @@ _Hit "Update"_
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/1c248149-6fe2-4c2f-b0d4-4c2871e18fbb)
 
 
-# Step 4 : Create Application Load balancer
+# Step 5 : Create Application Load balancer
 
 
 _On the navigation pane, under LOAD BALANCING, choose Load balancers_
@@ -180,7 +180,7 @@ _Under Load balancer we can see the newly created Load balancer "my-app-alb"_
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/73d78d2d-131c-49a9-93b2-5548bf448de9)
 
 
-# Step 5 : Add Listener
+# Step 6 : Add Listener
 
 
 _Once we Enable "my-app-alb" load balance we can find "listener" tab_
@@ -198,7 +198,7 @@ _Under " Redirect" ,Choose HTTPS : 443_
 
 
 
-# Step 6 : Manage Listener Rules
+# Step 7 : Manage Listener Rules
 
 _Manage rules of "HTTPS" listener_
 _Enable "HTTPS" listener and in **"Actions"** select "Manage rules"_
@@ -236,7 +236,7 @@ _Add a "site not found" text in Response body_
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/41b2a74e-4a26-4cd7-8f5c-af0094ce6a8c)
 
 
-# Step 6 : Add Record in Route53
+# Step 8 : Add Record in Route53
 
 
 _On the navigation pane, in **Route53** , choose **Hosted zones**_
@@ -253,7 +253,7 @@ _Under route traffic choose:_
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/fb607a61-ddc6-4d03-9c2a-f39ebe6705e0)
 
 
-# Step 7 : Call URL 
+# Step 9 : Call URL 
 
 _Once we call url we can find the version one page_
 
@@ -277,21 +277,22 @@ Canary deployment is the practice of making staged releases. We roll out a softw
 
 
 
-# Step 8 : Create a version 2 
+# Step 10 : Create a version 2 
 
 
 * **_Repeat the same steps 1, steps 2 & steps 3 with name Version 2 instead of version 1_**
 
  **Step 1 : Create Launch configuration**
  **Step 2 : Create Auto Scaling Group**
- **Step 3 : Attach Target group to Auto Scaling Group**
+ **Step 3 : Create Target Group**
+ **Step 4 : Attach Target group to Auto Scaling Group**
 
 _Now you can see "version 2" added in Target group_
 
 ![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/ce13c4d3-ba22-49a6-95db-35f5ed97da57)
 
 
-# Step 8 : Manage Listener Rules (HTTPS)
+# Step 11 : Manage Listener Rules (HTTPS)
 
 _Edit & Add Version2 target group in the same rule
 
@@ -309,7 +310,7 @@ _under **Forward to** add "my-app-version2-tg"_
 > `Note: This configuration can lead clients to trouble, Once they refresh there is a possibility to switch versions`
 
 
-# Step 9 : Add Group-level stickiness
+# Step 12 : Add Group-level stickiness
 
 * **_If a target group is sticky, requests routed to it remain in that target group for the duration of the session. Individual target stickiness is a configuration of the target group_**
 

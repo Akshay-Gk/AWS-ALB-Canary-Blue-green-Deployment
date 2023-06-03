@@ -7,7 +7,7 @@ ALB supports weighted traffic distribution so with the help of ALB we can do "Ca
 
 # Diagram:
 
-![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/3acd37c6-2db8-4c42-9f6d-e466f6e35416)
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/ee994e40-be40-4324-9c9a-9c5ecd3ae0d7)
 
 
 

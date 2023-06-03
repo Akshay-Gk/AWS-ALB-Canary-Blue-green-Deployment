@@ -273,7 +273,7 @@ Canary deployment is the practice of making staged releases. We roll out a softw
 
 # Diagram:
 
-![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/e7dc66d3-cd0c-4d1e-84d9-a4d731b1d30c)
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/475bd80d-e7fb-4a48-92d2-01694cc683ba)
 
 
 
@@ -327,14 +327,14 @@ Blue-green deployment is an application release model that gradually transfers u
 
 # Diagram:
 
-![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/b2418a40-025b-49c3-a8da-f690cc2413fe)
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/e05f2b9a-08d7-40a1-a0b8-913aed08b68d)
 
 
 * **_After creating the Version 2 we switch the whole traffic from "Version1 to Version2"_**
 
 ## **_Edit "weightage" to "0% traffic to Version1" and "100% traffic to Version2"_**
 
-![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/3603d809-b6fd-4997-b578-c271cea63c97)
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/c77db3eb-3743-4290-aabe-c033be7a4d9d)
 
 > `Note: We should not delete the old version immediately after switching to the new version. The old version could be useful in case of any bug issues with the new version
 

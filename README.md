@@ -332,6 +332,8 @@ Blue-green deployment is an application release model that gradually transfers u
 
 * **_After creating the Version 2 we switch the whole traffic from "Version1 to Version2"_**
 
+## **_Edit "weightage" to "0% traffic to Version1" and "100% traffic to Version2"_**
+
 ![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/3603d809-b6fd-4997-b578-c271cea63c97)
 
 > `Note: We should not delete the old version immediately after switching to the new version. The old version could be useful in case of any bug issues with the new version

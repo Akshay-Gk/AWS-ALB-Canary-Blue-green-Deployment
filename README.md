@@ -320,15 +320,22 @@ _Hit tick mark then hit "save"_
 
 
 
-# Canary Deployment:
+# Blue-Green Deployment:
+
+Blue-green deployment is an application release model that gradually transfers user traffic from a previous version of an app or microservice to a nearly identical new release—both of which are running in production
+
+# Diagram:
+
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/b2418a40-025b-49c3-a8da-f690cc2413fe)
 
 
+* **_After creating the Version 2 we switch the whole traffic from "Version1 to Version2"_**
+
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/3603d809-b6fd-4997-b578-c271cea63c97)
+
+> `Note: We should not delete the old version immediately after switching to the new version. The old version could be useful in case of any bug issues with the new version
 
 
-
-
-
-
-
+> **Note: We could set the number of old version instances to the "Min" value in "Auto Scaling Group" to reduce cost**
 
 

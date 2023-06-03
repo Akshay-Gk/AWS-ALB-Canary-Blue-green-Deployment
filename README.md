@@ -220,7 +220,7 @@ _Add your "host name" under "Host header"_
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/a6d0b10e-c598-4c97-9b65-bbfee6aacc50)
 
 
-_under **Add action** Select "Forward to" from the drop down select "my-app-version1-tg: 1"_
+_under **Add action** Select "Forward to" from the drop down select "my-app-version1-tg"_
 _Hit tick mark then hit "save"_
 
 ![image](https://github.com/Akshay-Gk/Migrate-EBS-volume-from-one-region-to-other/assets/112197849/b364da54-ba5b-4a58-965b-766103d4b44a)
@@ -268,17 +268,67 @@ _Once we call url we can find the version one page_
 
 # Canary Deployment:
 
+Canary deployment is the practice of making staged releases. We roll out a software update to a small part of the users first, so they may test it and provide feedback. Once the change is accepted, the update is rolled out to the rest of the users
+
+
 # Diagram:
 
 ![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/e7dc66d3-cd0c-4d1e-84d9-a4d731b1d30c)
 
 
-Canary deployment is the practice of making staged releases. We roll out a software update to a small part of the users first, so they may test it and provide feedback. Once the change is accepted, the update is rolled out to the rest of the users
 
 # Step 8 : Create a version 2 
 
+
 * **_Repeat the same steps 1, steps 2 & steps 3 with name Version 2 instead of version 1_**
 
-# Step 8 : 
+ **Step 1 : Create Launch configuration**
+ **Step 2 : Create Auto Scaling Group**
+ **Step 3 : Attach Target group to Auto Scaling Group**
+
+_Now you can see "version 2" added in Target group_
+
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/ce13c4d3-ba22-49a6-95db-35f5ed97da57)
+
+
+# Step 8 : Manage Listener Rules (HTTPS)
+
+_Edit & Add Version2 target group in the same rule
+
+_under **Forward to** add "my-app-version2-tg"_
+
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/f07d85cc-ea24-45b7-9291-7c89bc453dac)
+
+## **_Add the desire "weightage" for Version1 & Version2. Here i'm setting "90% traffic to Version1" and "10% traffic to Version2"_**
+
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/4babe132-a790-4904-ad8c-d56f34ee1bdb)
+
+* **_Now we have routed "90% traffic to Version1" and "10% traffic to Version2" Target group_**
+
+
+> `Note: This configuration can lead clients to trouble, Once they refresh there is a possibility to switch versions`
+
+
+# Step 9 : Add Group-level stickiness
+
+* **_If a target group is sticky, requests routed to it remain in that target group for the duration of the session. Individual target stickiness is a configuration of the target group_**
+
+_Enable the box and set desired duration_
+_Hit tick mark then hit "save"_
+
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/327d6a23-cc52-40ae-85c4-56d9821f78f8)
+
+
+
+# Canary Deployment:
+
+
+
+
+
+
+
+
+
 
 

@@ -270,6 +270,8 @@ _Once we call url we can find the version one page_
 
 Canary deployment is the practice of making staged releases. We roll out a software update to a small part of the users first, so they may test it and provide feedback. Once the change is accepted, the update is rolled out to the rest of the users
 
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/f480bd73-08b5-4558-922c-df4c8dd370a7)
+
 
 # Diagram:
 
@@ -324,6 +326,10 @@ _Hit tick mark then hit "save"_
 # Blue-Green Deployment:
 
 Blue-green deployment is an application release model that gradually transfers user traffic from a previous version of an app or microservice to a nearly identical new release—both of which are running in production
+
+![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/c7d2d9f4-d5c6-42dd-8f86-8b5479a3127f)
+
+
 
 # Diagram:
 

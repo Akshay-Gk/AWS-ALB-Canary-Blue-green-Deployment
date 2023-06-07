@@ -9,6 +9,22 @@ ALB supports weighted traffic distribution so with the help of ALB we can do "Ca
 
 ![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/ee994e40-be40-4324-9c9a-9c5ecd3ae0d7)
 
+## These are steps to achieve this:
+
+* *Create Launch configuration*
+* *Create Auto Scaling Group*
+* *Create Target Group*
+* *Attach Target group to Auto Scaling Group*
+* *Create Application Load balancer*
+* *Add Listener*
+* *Manage Listener Rules*
+* *Add Record in Route53*
+* *Create a version 2*
+* *Manage Listener Rules (HTTPS)*
+* *Add Group-level stickiness*
+* *Edit weightage* 
+
+
 
 
 # Step 1 : Create Launch configuration
@@ -334,6 +350,9 @@ Blue-green deployment is an application release model that gradually transfers u
 # Diagram:
 
 ![image](https://github.com/Akshay-Gk/AWS-ALB-Canary-Blue-green-Deployment/assets/112197849/e05f2b9a-08d7-40a1-a0b8-913aed08b68d)
+
+
+# Step 13 : Edit weightage
 
 
 * **_After creating the Version 2 we switch the whole traffic from "Version1 to Version2"_**
